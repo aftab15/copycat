@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+  <!-- ======= Hero Section ======= -->
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+
+      <div class="container" data-aos="fade-up">
+        <div class="row">
+
+          <div class="col-lg-5 col-md-6">
+            <div class="about-img" data-aos="fade-right" data-aos-delay="100">
+              <img src="{% static 'copycat/img/16.png' %}" alt="">
+            </div>
+          </div>
+
+          <div class="col-lg-7 col-md-6">
+            <div class="about-content" data-aos="fade-left" data-aos-delay="100">
+              <h2>About Us</h2>
+              <h3>Copy-Cat is a sophisticated tool using state of the art computational linguistic algorithms to detect plagiarism. Copy-cat can be used in multiple ways.</h3>
+              <ol>
+                <li><b>Manual operation </b> - Enter a body of text and we will evaluate it for you</li>
+                <li><b>File Upload </b> - We accept docx, doc files</li>
+                <li><b>API access </b> - Integrate Copycat into your existing workflows using our API</li>
+              </ol>
+              <ul>
+                <li><i class="ion-android-checkmark-circle"></i> Copywriting : Protect your original content</li>
+                <li><i class="ion-android-checkmark-circle"></i> Education : Copy-cat is a great companion for educational assessment. Call out students who've been getting Google to do their homework</li>
+                <li><i class="ion-android-checkmark-circle"></i> Business : Your content should always remain yours. Use copy-cat to  find the copy-cats out there</li>
+              </ul>
+              <h3>How it works:</h3>
+              <p>Our algorithms process your text and create a 'signature' of sorts. This is then scanned across a number of major Search engine API's in a highly efficient automated manner. We follow through on each result and process the pages to filter their content. Our local cache speeds up querytimes and helps us serve you in a more cost effective manner!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- End About Section -->
+
+  </main><!-- End #main -->
+
+{% endblock %}

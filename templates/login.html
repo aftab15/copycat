@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+  <style>
+      .side{
+          padding-top:0px !important ;
+          text-align: center;
+      }
+      .blk{
+          height: 150vh; 
+      }
+  </style>
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="clearfix">
+    <div class="container d-flex blk">
+      <div class="row justify-content-center align-self-center" data-aos="fade-up">
+        <div class="col-md-6 intro-info order-md-first order-last" data-aos="zoom-in" data-aos-delay="100">
+            <h2>Welcome<br>to <span>Copy-Cat</span></h2>
+            <form method="post" action="/login">
+                {% csrf_token %}
+                <div class="form-group">
+                  <label for="loginusername">User name</label>
+                  <input type="text" name="loginusername" class="form-control" id="loginusername" placeholder="Enter Username">
+                </div>
+                <div class="form-group">
+                  <label for="loginpassword">Password</label>
+                  <input type="password" class="form-control" id="loginpassword" name="loginpassword" placeholder="Password">
+                </div>
+                <button type="submit" class="btn btn-primary">Login</button>
+              </form>
+        </div>
+
+        <div class="col-md-6 intro-img order-md-last order-first" data-aos="zoom-out" data-aos-delay="200">
+          <img src="{% static 'copycat/img/16.png' %}" alt="" class="img-fluid">
+          <div class="intro-info" data-aos="zoom-in" data-aos-delay="100">
+          <h2>Copy-Cat hates <span>Plagerism</span></h2>
+        </div>  
+        </div>
+      </div>
+
+    </div>
+  </section><!-- End Hero -->
+
+{% endblock %}
